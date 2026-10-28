@@ -1,4 +1,4 @@
-import type { Metadata } from 'voter' // atau sesuaikan import type Next Anda
+import type { Metadata } from 'next' // atau sesuaikan import type Next Anda
 import './globals.css'
 
 export const metadata: Metadata = {
