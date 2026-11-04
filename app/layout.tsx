@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import type { Metadata } from 'next' // a tau sesuaikan import type Next Anda
 import './globals.css'
 
 export const metadata: Metadata = {
@@ -9,11 +9,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Rangga Kurnia Sandhi — IT Support & Software Engineer',
     description: 'Jelajahi rekam jejak, publikasi ilmiah, dan proyek lintas platform (Desktop, Android, Web) karya Rangga Kurnia Sandhi.',
-    url: 'https://portoranggakurnia.com',
+    url: 'https://portoranggakurnia.com', // Ubah nanti setelah domain aktif
     siteName: 'Rangga Kurnia Sandhi Portfolio',
     images: [
       {
-        url: '/og-image.jpg',
+        url: '/og-image.jpg', // Pastikan file gambar ada di folder public
         width: 1200,
         height: 630,
         alt: 'Rangga Kurnia Sandhi Portfolio Preview',
