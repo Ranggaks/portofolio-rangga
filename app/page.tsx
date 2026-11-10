@@ -363,7 +363,7 @@ export default function Home() {
               Professional Experience
             </h2>
           </div>
-          <p className="text-[11px] sm:text-xs font-mono text-[#202A3A]/60">PENGALAMAN MAGANG & TEKNIS</p>
+          <p className="text-[11px] sm:text-xs font-mono text-[#202A3A]/60">PENGALAMAN MAGANG & SISTEM</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
