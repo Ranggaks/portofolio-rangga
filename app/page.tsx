@@ -363,10 +363,31 @@ export default function Home() {
               Professional Experience
             </h2>
           </div>
-          <p className="text-[11px] sm:text-xs font-mono text-[#202A3A]/60">PENGALAMAN MAGANG & SISTEM</p>
+          <p className="text-[11px] sm:text-xs font-mono text-[#202A3A]/60">PENGALAMAN MAGANG & TEKNIS</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
+          
+          {/* Pengalaman Baru: IT Support RSAB Harapan Kita */}
+          <div className="bg-[#EDF2FA] p-6 sm:p-8 rounded-2xl sm:rounded-[2rem] border border-[#EDF2FA] hover:border-[#263B63]/40 hover:shadow-lg transition-all duration-300 flex flex-col justify-between group">
+            <div>
+              <div className="flex flex-col sm:flex-row justify-between items-start gap-2 mb-3 sm:mb-4">
+                <div>
+                  <span className="text-[11px] font-mono text-[#263B63] font-bold uppercase tracking-wider">IT Support (Praktik Teknis SIMRS)</span>
+                  <h3 className="text-lg sm:text-xl font-bold text-[#202A3A] mt-0.5 group-hover:text-[#263B63] transition-colors">RS Anak dan Bunda Harapan Kita</h3>
+                </div>
+                <span className="text-[11px] font-mono px-2.5 py-0.5 sm:px-3 sm:py-1 bg-white border border-[#EDF2FA] rounded-lg sm:rounded-xl text-[#263B63] font-semibold">6 Bulan</span>
+              </div>
+              <p className="text-xs sm:text-sm text-[#202A3A]/80 leading-relaxed mt-3 text-justify">
+                Bertugas menginstalasi, memelihara, dan memperbaiki infrastruktur perangkat keras, jaringan, serta perangkat medis berbasis IT guna memastikan seluruh operasional pelayanan kesehatan SIMRS berjalan 24/7 tanpa gangguan.
+              </p>
+            </div>
+            <div className="mt-5 sm:mt-6 pt-3 sm:pt-4 border-t border-[#202A3A]/10 text-[11px] sm:text-xs font-mono text-[#202A3A]/70">
+              <span className="font-semibold text-[#202A3A]">Skills:</span> SIMRS Infrastructure, Hardware, Network Troubleshooting, Maintenance
+            </div>
+          </div>
+
+          {/* Pengalaman 2: PT Tampian Kencana Sejati */}
           <div className="bg-[#EDF2FA] p-6 sm:p-8 rounded-2xl sm:rounded-[2rem] border border-[#EDF2FA] hover:border-[#263B63]/40 hover:shadow-lg transition-all duration-300 flex flex-col justify-between group">
             <div>
               <div className="flex flex-col sm:flex-row justify-between items-start gap-2 mb-3 sm:mb-4">
@@ -385,6 +406,7 @@ export default function Home() {
             </div>
           </div>
 
+          {/* Pengalaman 3: MI Al-Hikmah Jakarta */}
           <div className="bg-[#EDF2FA] p-6 sm:p-8 rounded-2xl sm:rounded-[2rem] border border-[#EDF2FA] hover:border-[#263B63]/40 hover:shadow-lg transition-all duration-300 flex flex-col justify-between group">
             <div>
               <div className="flex flex-col sm:flex-row justify-between items-start gap-2 mb-3 sm:mb-4">
@@ -402,10 +424,11 @@ export default function Home() {
               <span className="font-semibold text-[#202A3A]">Tech:</span> Java, NetBeans IDE, MySQL, JasperReports
             </div>
           </div>
+
         </div>
       </section>
 
-      {/* ================= SKILLS & INFRASTRUCTURE (DIKEMBALIKAN KE 3 KOTAK UTAMA) ================= */}
+      {/* ================= SKILLS & INFRASTRUCTURE ================= */}
       <section id="skills" className="max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-20 border-t border-[#EDF2FA] scroll-mt-20">
         <div className="mb-8 sm:mb-12">
           <span className="text-xs font-mono uppercase tracking-widest text-[#263B63] font-semibold">Technical Stack</span>
@@ -416,7 +439,6 @@ export default function Home() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
           
-          {/* Kotak 1: Programming Languages */}
           <div className="bg-[#EDF2FA] p-6 sm:p-7 rounded-2xl sm:rounded-[2rem] border border-[#EDF2FA] shadow-2xs hover:border-[#263B63]/40 transition-all flex flex-col justify-between">
             <div>
               <h3 className="text-xs sm:text-sm font-bold text-[#202A3A] mb-3 pb-2 border-b border-[#202A3A]/10 flex items-center gap-2">
@@ -434,7 +456,6 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Kotak 2: Frameworks & Tools */}
           <div className="bg-[#EDF2FA] p-6 sm:p-7 rounded-2xl sm:rounded-[2rem] border border-[#EDF2FA] shadow-2xs hover:border-[#263B63]/40 transition-all flex flex-col justify-between">
             <div>
               <h3 className="text-xs sm:text-sm font-bold text-[#202A3A] mb-3 pb-2 border-b border-[#202A3A]/10 flex items-center gap-2">
@@ -453,7 +474,6 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Kotak 3: Database & IT Support */}
           <div className="bg-[#EDF2FA] p-6 sm:p-7 rounded-2xl sm:rounded-[2rem] border border-[#EDF2FA] shadow-2xs hover:border-[#263B63]/40 transition-all flex flex-col justify-between">
             <div>
               <h3 className="text-xs sm:text-sm font-bold text-[#202A3A] mb-3 pb-2 border-b border-[#202A3A]/10 flex items-center gap-2">
@@ -486,148 +506,43 @@ export default function Home() {
 
         <div className="space-y-12 sm:space-y-20">
           
-          {/* PROYEK 1: DESKTOP (Landscape dengan Bingkai Jendela Profesional) */}
+          {/* PROYEK 1: DESKTOP */}
           <div className="bg-[#EDF2FA] rounded-2xl sm:rounded-[2.5rem] border border-[#EDF2FA] p-5 sm:p-10 transition-all duration-300 hover:shadow-xl hover:border-[#263B63]/50">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 items-center">
               
-              <div className="lg:col-span-8 bg-white rounded-2xl sm:rounded-3xl border border-[#202A3A]/15 overflow-hidden shadow-md relative group">
-                <div className="px-4 py-2.5 bg-[#EDF2FA] border-b border-[#EDF2FA] flex items-center justify-between">
-                  <div className="flex gap-1.5">
-                    <div className="w-2.5 h-2.5 rounded-full bg-rose-400"></div>
-                    <div className="w-2.5 h-2.5 rounded-full bg-amber-400"></div>
-                    <div className="w-2.5 h-2.5 rounded-full bg-emerald-400"></div>
-                  </div>
-                  <span className="text-[10px] font-mono text-[#263B63] font-bold">JAVA DESKTOP APP</span>
+              <div className="lg:col-span-7 space-y-4">
+                <div className="flex items-center gap-2">
+                  <span className="px-2.5 py-1 rounded-md bg-[#263B63] text-white text-[10px] font-mono font-bold uppercase">Desktop App</span>
+                  <span className="text-xs font-mono text-[#202A3A]/60">Sistem Keuangan Sekolah</span>
                 </div>
-                <div 
-                  className="w-full aspect-[16/10] relative flex items-center justify-center bg-slate-50 overflow-hidden cursor-zoom-in"
-                  onClick={() => {
-                    if (projectSlides.desktop_app.length > 0) {
-                      setLightboxData({
-                        images: projectSlides.desktop_app,
-                        currentIndex: activeSlide.desktop_app
-                      })
-                    }
-                  }}
-                  title="Klik untuk memperbesar gambar"
-                >
-                  {projectSlides.desktop_app.length > 0 && projectSlides.desktop_app[activeSlide.desktop_app] ? (
-                    <>
-                      <img 
-                        src={projectSlides.desktop_app[activeSlide.desktop_app]} 
-                        alt="Desktop App Screenshot" 
-                        className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-102" 
-                      />
-                      <div className="absolute top-3 right-3 bg-black/60 backdrop-blur-xs text-white text-[10px] font-mono px-2.5 py-1 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
-                        Klik untuk memperbesar
-                      </div>
-                    </>
-                  ) : (
-                    <div className="p-8 text-center">
-                      <span className="text-xs font-mono text-[#202A3A]/60 block mb-1 font-semibold">Area Screenshot Desktop App</span>
-                      <p className="text-xs text-[#202A3A]/70">Antarmuka Keuangan NetBeans & JasperReports</p>
-                    </div>
-                  )}
-                  {projectSlides.desktop_app.length > 1 && (
-                    <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-1.5 bg-black/50 backdrop-blur-xs px-3 py-1.5 rounded-full z-10" onClick={(e) => e.stopPropagation()}>
-                      {projectSlides.desktop_app.map((_, idx) => (
-                        <button 
-                          key={idx} 
-                          onClick={() => setActiveSlide(prev => ({ ...prev, desktop_app: idx }))}
-                          className={`w-1.5 h-1.5 rounded-full transition-all cursor-pointer ${activeSlide.desktop_app === idx ? 'bg-white w-4' : 'bg-white/50'}`}
-                        ></button>
-                      ))}
-                    </div>
-                  )}
+                <h3 className="text-xl sm:text-2xl font-bold text-[#202A3A]">Aplikasi Administrasi Keuangan MI Al-Hikmah</h3>
+                <p className="text-xs sm:text-sm text-[#202A3A]/80 leading-relaxed text-justify">
+                  Sistem informasi desktop yang dirancang untuk mendigitalisasi pencatatan pembayaran SPP dan administrasi siswa secara aman, terpusat, dan dilengkapi fitur cetak laporan otomatis berbasis JasperReports.
+                </p>
+                <div className="pt-2 flex flex-wrap gap-1.5 font-mono text-[11px] text-[#202A3A]/70">
+                  <span className="px-2.5 py-1 bg-white rounded-lg border border-[#EDF2FA]">Java</span>
+                  <span className="px-2.5 py-1 bg-white rounded-lg border border-[#EDF2FA]">NetBeans</span>
+                  <span className="px-2.5 py-1 bg-white rounded-lg border border-[#EDF2FA]">MySQL</span>
+                  <span className="px-2.5 py-1 bg-white rounded-lg border border-[#EDF2FA]">JasperReports</span>
                 </div>
               </div>
 
-              <div className="lg:col-span-4 flex flex-col justify-between">
-                <div>
-                  <span className="text-[11px] font-mono text-[#263B63] font-bold tracking-wider uppercase">Desktop Enterprise</span>
-                  <h3 className="text-xl sm:text-2xl font-bold text-[#202A3A] mt-1 sm:mt-2">Sistem Administrasi Keuangan Sekolah</h3>
-                  <p className="text-xs sm:text-sm text-[#202A3A]/80 mt-3 sm:mt-4 leading-relaxed text-justify">
-                    Aplikasi manajemen transaksi pembayaran siswa dan operasional sekolah dengan hak akses terotentikasi serta modul cetak laporan keuangan resmi berbasis JasperReports.
-                  </p>
-                </div>
-                <div className="mt-6 sm:mt-8 pt-4 sm:pt-6 border-t border-[#202A3A]/10">
-                  <div className="flex flex-wrap gap-1.5 sm:gap-2 text-[11px] sm:text-xs font-mono text-[#202A3A]/80">
-                    <span className="px-2.5 py-1 bg-white rounded-lg sm:rounded-xl font-medium border border-[#EDF2FA]">Java</span>
-                    <span className="px-2.5 py-1 bg-white rounded-lg sm:rounded-xl font-medium border border-[#EDF2FA]">NetBeans</span>
-                    <span className="px-2.5 py-1 bg-white rounded-lg sm:rounded-xl font-medium border border-[#EDF2FA]">MySQL</span>
-                    <span className="px-2.5 py-1 bg-white rounded-lg sm:rounded-xl font-medium border border-[#EDF2FA]">JasperReports</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* PROYEK 2: ANDROID MOBILE (Potret dengan ukuran presisi & bingkai perangkat selaras) */}
-          <div className="bg-[#EDF2FA] rounded-2xl sm:rounded-[2.5rem] border border-[#EDF2FA] p-5 sm:p-10 transition-all duration-300 hover:shadow-xl hover:border-[#263B63]/50">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-center">
-              
-              <div className="lg:col-span-5 flex flex-col justify-between order-2 lg:order-1">
-                <div>
-                  <span className="text-[11px] font-mono text-[#263B63] font-bold tracking-wider uppercase">02. Android Mobile</span>
-                  <h3 className="text-xl sm:text-2xl font-bold text-[#202A3A] mt-1 sm:mt-2">Sistem Pakar Diagnosa Kerusakan Bus</h3>
-                  <p className="text-xs sm:text-sm text-[#202A3A]/80 mt-3 sm:mt-4 leading-relaxed text-justify">
-                    Aplikasi Android diagnostik armada bus berbasis Forward Chaining. Membantu teknisi lapangan mengidentifikasi gejala kerusakan secara cepat dan presisi melalui REST API.
-                  </p>
-                </div>
-                <div className="mt-6 sm:mt-8 pt-4 sm:pt-6 border-t border-[#202A3A]/10">
-                  <div className="flex flex-wrap gap-1.5 sm:gap-2 text-[11px] sm:text-xs font-mono text-[#202A3A]/80">
-                    <span className="px-2.5 py-1 bg-white rounded-lg sm:rounded-xl font-medium border border-[#EDF2FA]">Kotlin</span>
-                    <span className="px-2.5 py-1 bg-white rounded-lg sm:rounded-xl font-medium border border-[#EDF2FA]">Android Studio</span>
-                    <span className="px-2.5 py-1 bg-white rounded-lg sm:rounded-xl font-medium border border-[#EDF2FA]">Forward Chaining</span>
-                    <span className="px-2.5 py-1 bg-white rounded-lg sm:rounded-xl font-medium border border-[#EDF2FA]">REST API</span>
-                  </div>
-                </div>
-              </div>
-
-              <div className="lg:col-span-7 flex justify-center order-1 lg:order-2">
-                <div className="w-full max-w-[240px] sm:max-w-[270px] bg-white rounded-[2.2rem] border-[5px] border-[#202A3A]/15 overflow-hidden shadow-md relative group">
-                  <div className="px-3 py-2 bg-[#EDF2FA] border-b border-[#EDF2FA] flex items-center justify-center">
-                    <div className="w-12 h-1 bg-[#202A3A]/20 rounded-full"></div>
-                  </div>
-                  <div 
-                    className="w-full aspect-[9/16] relative flex items-center justify-center bg-slate-50 overflow-hidden cursor-zoom-in"
-                    onClick={() => {
-                      if (projectSlides.mobile_app.length > 0) {
-                        setLightboxData({
-                          images: projectSlides.mobile_app,
-                          currentIndex: activeSlide.mobile_app
-                        })
-                      }
-                    }}
-                    title="Klik untuk memperbesar gambar"
-                  >
-                    {projectSlides.mobile_app.length > 0 && projectSlides.mobile_app[activeSlide.mobile_app] ? (
-                      <>
+              <div className="lg:col-span-5">
+                <div className="rounded-2xl bg-white border border-[#202A3A]/10 p-2 shadow-md overflow-hidden group">
+                  <div className="rounded-xl bg-[#EDF2FA] overflow-hidden relative aspect-[16/10] flex items-center justify-center">
+                    {projectSlides.desktop_app.length > 0 ? (
+                      <div className="w-full h-full relative cursor-pointer" onClick={() => setLightboxData({ images: projectSlides.desktop_app, currentIndex: activeSlide.desktop_app })}>
                         <img 
-                          src={projectSlides.mobile_app[activeSlide.mobile_app]} 
-                          alt="Mobile App Screenshot" 
-                          className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-102 p-1" 
+                          src={projectSlides.desktop_app[activeSlide.desktop_app] || projectSlides.desktop_app[0]} 
+                          alt="Desktop App Preview" 
+                          className="w-full h-full object-cover transition-all duration-500 hover:scale-105"
                         />
-                        <div className="absolute top-3 right-3 bg-black/60 backdrop-blur-xs text-white text-[10px] font-mono px-2.5 py-1 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
-                          Klik untuk memperbesar
+                        <div className="absolute bottom-2 right-2 px-2 py-1 bg-black/60 backdrop-blur-md text-white text-[10px] font-mono rounded-md">
+                          {activeSlide.desktop_app + 1} / {projectSlides.desktop_app.length} (Klik Zoom)
                         </div>
-                      </>
+                      </div>
                     ) : (
-                      <div className="p-8 text-center">
-                        <span className="text-xs font-mono text-[#202A3A]/60 block mb-1 font-semibold">Area Screenshot Mobile App</span>
-                        <p className="text-xs text-[#202A3A]/70">Antarmuka Diagnosa Kerusakan</p>
-                      </div>
-                    )}
-                    {projectSlides.mobile_app.length > 1 && (
-                      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-1.5 bg-black/50 backdrop-blur-xs px-3 py-1.5 rounded-full z-10" onClick={(e) => e.stopPropagation()}>
-                        {projectSlides.mobile_app.map((_, idx) => (
-                          <button 
-                            key={idx} 
-                            onClick={() => setActiveSlide(prev => ({ ...prev, mobile_app: idx }))}
-                            className={`w-1.5 h-1.5 rounded-full transition-all cursor-pointer ${activeSlide.mobile_app === idx ? 'bg-white w-4' : 'bg-white/50'}`}
-                          ></button>
-                        ))}
-                      </div>
+                      <span className="text-xs font-mono text-[#202A3A]/50">Screenshot Desktop App</span>
                     )}
                   </div>
                 </div>
@@ -636,121 +551,128 @@ export default function Home() {
             </div>
           </div>
 
-          {/* PROYEK 3: WEB PLATFORM (Landscape dengan Bingkai Jendela Profesional) */}
+          {/* PROYEK 2: MOBILE */}
           <div className="bg-[#EDF2FA] rounded-2xl sm:rounded-[2.5rem] border border-[#EDF2FA] p-5 sm:p-10 transition-all duration-300 hover:shadow-xl hover:border-[#263B63]/50">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 items-center">
               
-              <div className="lg:col-span-8 bg-white rounded-2xl sm:rounded-3xl border border-[#202A3A]/15 overflow-hidden shadow-md relative group">
-                <div className="px-4 py-2.5 bg-[#EDF2FA] border-b border-[#EDF2FA] flex items-center justify-between">
-                  <div className="flex gap-1.5">
-                    <div className="w-2.5 h-2.5 rounded-full bg-rose-400"></div>
-                    <div className="w-2.5 h-2.5 rounded-full bg-amber-400"></div>
-                    <div className="w-2.5 h-2.5 rounded-full bg-emerald-400"></div>
-                  </div>
-                  <span className="text-[10px] font-mono text-[#263B63] font-bold">FULL-STACK WEB PLATFORM</span>
-                </div>
-                <div 
-                  className="w-full aspect-[16/10] relative flex items-center justify-center bg-slate-50 overflow-hidden cursor-zoom-in"
-                  onClick={() => {
-                    if (projectSlides.web_app.length > 0) {
-                      setLightboxData({
-                        images: projectSlides.web_app,
-                        currentIndex: activeSlide.web_app
-                      })
-                    }
-                  }}
-                  title="Klik untuk memperbesar gambar"
-                >
-                  {projectSlides.web_app.length > 0 && projectSlides.web_app[activeSlide.web_app] ? (
-                    <>
-                      <img 
-                        src={projectSlides.web_app[activeSlide.web_app]} 
-                        alt="Web App Screenshot" 
-                        className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-102" 
-                      />
-                      <div className="absolute top-3 right-3 bg-black/60 backdrop-blur-xs text-white text-[10px] font-mono px-2.5 py-1 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
-                        Klik untuk memperbesar
+              <div className="lg:col-span-5 order-2 lg:order-1 flex justify-center">
+                <div className="w-full max-w-[240px] rounded-3xl bg-white border border-[#202A3A]/10 p-2 shadow-md overflow-hidden">
+                  <div className="rounded-2xl bg-[#EDF2FA] overflow-hidden relative aspect-[9/16] flex items-center justify-center">
+                    {projectSlides.mobile_app.length > 0 ? (
+                      <div className="w-full h-full relative cursor-pointer" onClick={() => setLightboxData({ images: projectSlides.mobile_app, currentIndex: activeSlide.mobile_app })}>
+                        <img 
+                          src={projectSlides.mobile_app[activeSlide.mobile_app] || projectSlides.mobile_app[0]} 
+                          alt="Mobile App Preview" 
+                          className="w-full h-full object-cover transition-all duration-500 hover:scale-105"
+                        />
+                        <div className="absolute bottom-2 right-2 px-2 py-1 bg-black/60 backdrop-blur-md text-white text-[10px] font-mono rounded-md">
+                          {activeSlide.mobile_app + 1} / {projectSlides.mobile_app.length} (Klik Zoom)
+                        </div>
                       </div>
-                    </>
-                  ) : (
-                    <div className="p-8 text-center">
-                      <span className="text-xs font-mono text-[#202A3A]/60 block mb-1 font-semibold">Area Screenshot Website</span>
-                      <p className="text-xs text-[#202A3A]/70">Galeri Interaktif & Panel Admin Supabase</p>
-                    </div>
-                  )}
-                  {projectSlides.web_app.length > 1 && (
-                    <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-1.5 bg-black/50 backdrop-blur-xs px-3 py-1.5 rounded-full z-10" onClick={(e) => e.stopPropagation()}>
-                      {projectSlides.web_app.map((_, idx) => (
-                        <button 
-                          key={idx} 
-                          onClick={() => setActiveSlide(prev => ({ ...prev, web_app: idx }))}
-                          className={`w-1.5 h-1.5 rounded-full transition-all cursor-pointer ${activeSlide.web_app === idx ? 'bg-white w-4' : 'bg-white/50'}`}
-                        ></button>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              </div>
-
-              <div className="lg:col-span-4 flex flex-col justify-between">
-                <div>
-                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-2">
-                    <span className="text-[11px] font-mono text-[#263B63] font-bold tracking-wider uppercase">03. Web Platform</span>
-                    <a href="https://yrlooksphotography.vercel.app" target="_blank" rel="noopener noreferrer" className="px-4 py-2 rounded-xl bg-[#263B63] text-white text-xs font-mono font-semibold hover:bg-[#202A3A] transition-all shadow-sm flex items-center justify-center gap-1.5 w-fit">
-                      <span>Lihat Website</span>
-                      <span>↗</span>
-                    </a>
-                  </div>
-
-                  <h3 className="text-xl sm:text-2xl font-bold text-[#202A3A] mt-1 sm:mt-2">YRLOOKS Photography Platform</h3>
-                  <p className="text-xs sm:text-sm text-[#202A3A]/80 mt-3 sm:mt-4 leading-relaxed text-justify">
-                    Website portofolio fotografi full-stack dengan galeri interaktif berfitur filter & lightbox, sistem reservasi daring berbasis cloud, serta panel admin terproteksi untuk manajemen pesanan.
-                  </p>
-                </div>
-                <div className="mt-6 sm:mt-8 pt-4 sm:pt-6 border-t border-[#202A3A]/10">
-                  <div className="flex flex-wrap gap-1.5 sm:gap-2 text-[11px] sm:text-xs font-mono text-[#202A3A]/80">
-                    <span className="px-2.5 py-1 bg-white rounded-lg sm:rounded-xl font-medium border border-[#EDF2FA]">Next.js</span>
-                    <span className="px-2.5 py-1 bg-white rounded-lg sm:rounded-xl font-medium border border-[#EDF2FA]">Supabase</span>
-                    <span className="px-2.5 py-1 bg-white rounded-lg sm:rounded-xl font-medium border border-[#EDF2FA]">Tailwind CSS</span>
-                    <span className="px-2.5 py-1 bg-white rounded-lg sm:rounded-xl font-medium border border-[#EDF2FA]">Vercel</span>
+                    ) : (
+                      <span className="text-xs font-mono text-[#202A3A]/50">Screenshot Mobile App</span>
+                    )}
                   </div>
                 </div>
               </div>
+
+              <div className="lg:col-span-7 order-1 lg:order-2 space-y-4">
+                <div className="flex items-center gap-2">
+                  <span className="px-2.5 py-1 rounded-md bg-[#263B63] text-white text-[10px] font-mono font-bold uppercase">Android App</span>
+                  <span className="text-xs font-mono text-[#202A3A]/60">Sistem Pakar Kendaraan</span>
+                </div>
+                <h3 className="text-xl sm:text-2xl font-bold text-[#202A3A]">Aplikasi Mobile Expert System Diagnosis Bus</h3>
+                <p className="text-xs sm:text-sm text-[#202A3A]/80 leading-relaxed text-justify">
+                  Aplikasi Android berbasis metode Forward Chaining untuk membantu mekanik dan pengemudi mendiagnosis gejala kerusakan armada bus secara cepat melalui antarmuka seluler yang interaktif.
+                </p>
+                <div className="pt-2 flex flex-wrap gap-1.5 font-mono text-[11px] text-[#202A3A]/70">
+                  <span className="px-2.5 py-1 bg-white rounded-lg border border-[#EDF2FA]">Kotlin</span>
+                  <span className="px-2.5 py-1 bg-white rounded-lg border border-[#EDF2FA]">Android Studio</span>
+                  <span className="px-2.5 py-1 bg-white rounded-lg border border-[#EDF2FA]">MySQL REST API</span>
+                  <span className="px-2.5 py-1 bg-white rounded-lg border border-[#EDF2FA]">Forward Chaining</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          {/* PROYEK 3: WEB */}
+          <div className="bg-[#EDF2FA] rounded-2xl sm:rounded-[2.5rem] border border-[#EDF2FA] p-5 sm:p-10 transition-all duration-300 hover:shadow-xl hover:border-[#263B63]/50">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 items-center">
+              
+              <div className="lg:col-span-7 space-y-4">
+                <div className="flex items-center gap-2">
+                  <span className="px-2.5 py-1 rounded-md bg-[#263B63] text-white text-[10px] font-mono font-bold uppercase">Web Full-Stack</span>
+                  <span className="text-xs font-mono text-[#202A3A]/60">Photography Portfolio & Booking</span>
+                </div>
+                <h3 className="text-xl sm:text-2xl font-bold text-[#202A3A]">Web YRLOOKS Photography Portfolio</h3>
+                <p className="text-xs sm:text-sm text-[#202A3A]/80 leading-relaxed text-justify">
+                  Platform web fotografi profesional dengan galeri interaktif, sistem reservasi/booking otomatis berbasis cloud, serta panel admin privat untuk mengelola portofolio secara real-time.
+                </p>
+                <div className="pt-2 flex flex-wrap gap-1.5 font-mono text-[11px] text-[#202A3A]/70">
+                  <span className="px-2.5 py-1 bg-white rounded-lg border border-[#EDF2FA]">Next.js</span>
+                  <span className="px-2.5 py-1 bg-white rounded-lg border border-[#EDF2FA]">React</span>
+                  <span className="px-2.5 py-1 bg-white rounded-lg border border-[#EDF2FA]">Tailwind CSS</span>
+                  <span className="px-2.5 py-1 bg-white rounded-lg border border-[#EDF2FA]">Supabase</span>
+                </div>
+              </div>
+
+              <div className="lg:col-span-5">
+                <div className="rounded-2xl bg-white border border-[#202A3A]/10 p-2 shadow-md overflow-hidden group">
+                  <div className="rounded-xl bg-[#EDF2FA] overflow-hidden relative aspect-[16/10] flex items-center justify-center">
+                    {projectSlides.web_app.length > 0 ? (
+                      <div className="w-full h-full relative cursor-pointer" onClick={() => setLightboxData({ images: projectSlides.web_app, currentIndex: activeSlide.web_app })}>
+                        <img 
+                          src={projectSlides.web_app[activeSlide.web_app] || projectSlides.web_app[0]} 
+                          alt="Web App Preview" 
+                          className="w-full h-full object-cover transition-all duration-500 hover:scale-105"
+                        />
+                        <div className="absolute bottom-2 right-2 px-2 py-1 bg-black/60 backdrop-blur-md text-white text-[10px] font-mono rounded-md">
+                          {activeSlide.web_app + 1} / {projectSlides.web_app.length} (Klik Zoom)
+                        </div>
+                      </div>
+                    ) : (
+                      <span className="text-xs font-mono text-[#202A3A]/50">Screenshot Web App</span>
+                    )}
+                  </div>
+                </div>
+              </div>
+
             </div>
           </div>
 
         </div>
       </section>
 
-      {/* ================= FOOTER & CONTACT ================= */}
-      <footer id="contact" className="max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-20 border-t border-[#EDF2FA] scroll-mt-20">
-        <div className="bg-[#EDF2FA] text-[#202A3A] rounded-2xl sm:rounded-[2.5rem] p-6 sm:p-12 border border-[#EDF2FA] flex flex-col md:flex-row justify-between items-start md:items-center gap-6 sm:gap-8 relative overflow-hidden">
+      {/* ================= CONTACT SECTION ================= */}
+      <section id="contact" className="max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-20 border-t border-[#EDF2FA] scroll-mt-20">
+        <div className="bg-[#202A3A] rounded-2xl sm:rounded-[2.5rem] p-8 sm:p-14 text-white shadow-2xl relative overflow-hidden">
+          <div className="absolute -right-20 -bottom-20 w-80 h-80 bg-[#263B63] rounded-full blur-3xl pointer-events-none opacity-50"></div>
           
-          <div className="absolute -right-16 -bottom-16 w-64 h-64 bg-[#263B63]/10 rounded-full blur-3xl pointer-events-none"></div>
-
-          <div className="relative z-10 max-w-lg">
-            <div className="inline-flex items-center gap-2 px-3 py-1 text-[10px] sm:text-xs font-semibold text-[#263B63] bg-white rounded-full border border-[#EDF2FA] mb-2.5">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#263B63] animate-pulse"></span>
-              GET IN TOUCH
-            </div>
-            <h2 className="text-xl sm:text-3xl font-extrabold tracking-tight text-[#202A3A]">Mari Berkolaborasi</h2>
-            <p className="text-xs sm:text-sm text-[#202A3A]/80 mt-2 leading-relaxed text-justify">
-              Terbuka untuk posisi IT Support Specialist, Technical Support, maupun Software Engineer. Mari diskusikan peluang kerja sama bersama Anda.
+          <div className="relative z-10 max-w-2xl">
+            <span className="text-xs font-mono uppercase tracking-widest text-white/60 font-semibold">Get in Touch</span>
+            <h2 className="text-2xl sm:text-4xl font-extrabold tracking-tight mt-1 sm:mt-2">
+              Mari Berkolaborasi & Terhubung Bersama
+            </h2>
+            <p className="text-xs sm:text-sm text-white/80 mt-3 leading-relaxed">
+              Terbuka untuk peluang karir sebagai IT Support, Infrastruktur, maupun Software Engineer. Hubungi saya melalui kontak di bawah ini.
             </p>
-          </div>
-          
-          <div className="relative z-10 w-full md:w-auto">
-            <a href="mailto:ranggakurnia222@gmail.com" className="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-[#263B63] text-white text-xs font-mono font-bold hover:bg-[#202A3A] transition-all text-center shadow-md flex items-center justify-center gap-2">
-              <span className="truncate">ranggakurnia222@gmail.com</span>
-              <span>→</span>
-            </a>
-          </div>
 
+            <div className="mt-8 flex flex-wrap gap-4 text-xs font-mono">
+              <a href="mailto:ranggakurniasandhi@gmail.com" className="px-5 py-3 rounded-xl bg-white text-[#202A3A] font-bold hover:bg-[#EDF2FA] transition-all shadow-md flex items-center gap-2">
+                <span>📧 ranggakurniasandhi@gmail.com</span>
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="px-5 py-3 rounded-xl bg-[#263B63] text-white font-bold hover:bg-white hover:text-[#202A3A] transition-all shadow-md flex items-center gap-2">
+                <span>💼 LinkedIn Profile</span>
+              </a>
+            </div>
+          </div>
         </div>
-        
-        <div className="mt-8 sm:mt-12 text-center text-xs text-[#202A3A]/60">
-          <p>© 2026 Rangga Kurnia Sandhi. All rights reserved.</p>
-        </div>
+      </section>
+
+      {/* ================= FOOTER ================= */}
+      <footer className="max-w-6xl mx-auto px-4 sm:px-6 py-8 border-t border-[#EDF2FA] text-center text-xs text-[#202A3A]/60 font-mono">
+        <p>© {new Date().getFullYear()} Rangga Kurnia Sandhi, S.Kom. All rights reserved.</p>
       </footer>
 
     </main>
