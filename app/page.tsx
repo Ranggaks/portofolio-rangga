@@ -672,7 +672,7 @@ export default function Home() {
 
       {/* ================= FOOTER ================= */}
       <footer className="max-w-6xl mx-auto px-4 sm:px-6 py-8 border-t border-[#EDF2FA] text-center text-xs text-[#202A3A]/60 font-mono">
-        <p>© {new Date().getFullYear()} Rangga Kurnia Sandhi, S.Kom. All rights reserved.</p>
+        <p>© 2026 Rangga Kurnia Sandhi, S.Kom. All rights reserved.</p>
       </footer>
 
     </main>
