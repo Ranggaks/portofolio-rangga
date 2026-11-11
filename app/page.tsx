@@ -113,15 +113,13 @@ export default function Home() {
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[650px] bg-gradient-to-b from-[#EDF2FA] via-transparent to-transparent pointer-events-none -z-10 blur-3xl"></div>
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#202A3A05_1px,transparent_1px),linear-gradient(to_bottom,#202A3A05_1px,transparent_1px)] bg-[size:24px_24px] sm:bg-[size:32px_32px] pointer-events-none -z-10"></div>
 
-      {/* ================= LIGHTBOX MODAL DENGAN KLIK LUAR & NAVIGASI ================= */}
+      {/* ================= LIGHTBOX MODAL ================= */}
       {lightboxData && (
         <div 
           className="fixed inset-0 z-50 bg-black/90 backdrop-blur-md flex items-center justify-center p-4 sm:p-8 animate-fadeIn"
           onClick={() => setLightboxData(null)}
         >
           <div className="relative max-w-6xl w-full max-h-[90vh] flex flex-col items-center justify-center pt-8" onClick={(e) => e.stopPropagation()}>
-            
-            {/* Tombol Tutup */}
             <button
               onClick={() => setLightboxData(null)}
               className="absolute top-0 right-0 px-4 py-2 bg-white/10 hover:bg-white/25 text-white rounded-xl text-xs font-mono font-semibold transition-all border border-white/20 flex items-center gap-2 cursor-pointer z-20"
@@ -129,9 +127,7 @@ export default function Home() {
               <span>Tutup X</span>
             </button>
 
-            {/* Container Gambar & Panah Navigasi */}
             <div className="relative w-full max-h-[85vh] flex items-center justify-center">
-              
               {lightboxData.images.length > 1 && (
                 <button
                   onClick={(e) => {
@@ -178,7 +174,6 @@ export default function Home() {
                   </svg>
                 </button>
               )}
-
             </div>
 
             {lightboxData.images.length > 1 && (
@@ -186,12 +181,11 @@ export default function Home() {
                 {lightboxData.currentIndex + 1} / {lightboxData.images.length}
               </div>
             )}
-
           </div>
         </div>
       )}
 
-      {/* ================= STICKY HEADER & MOBILE NAV BAR ================= */}
+      {/* ================= HEADER ================= */}
       <header className="fixed top-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-b border-[#EDF2FA] px-4 sm:px-8 md:px-16 py-3 shadow-2xs transition-all">
         <div className="max-w-6xl mx-auto flex justify-between items-center">
           <a href="#" className="font-bold text-xs sm:text-sm tracking-tight text-[#202A3A] flex items-center gap-2 group truncate">
@@ -200,7 +194,6 @@ export default function Home() {
             <span className="hidden xs:inline-block text-[10px] font-mono text-[#263B63] bg-[#EDF2FA] border border-[#EDF2FA] px-1.5 py-0.5 rounded font-semibold">S.Kom.</span>
           </a>
 
-          {/* Desktop Nav */}
           <nav className="hidden md:flex items-center gap-6 text-xs font-semibold tracking-wide text-[#202A3A]/70 uppercase">
             <a href="#about" className="hover:text-[#263B63] transition-colors">About</a>
             <a href="#publication" className="hover:text-[#263B63] transition-colors">Publication</a>
@@ -217,7 +210,6 @@ export default function Home() {
               Contact
             </a>
 
-            {/* Mobile Menu Toggle Button */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="md:hidden p-2 rounded-xl bg-[#EDF2FA] text-[#263B63] focus:outline-none flex items-center justify-center hover:bg-[#EDF2FA]/80 transition-colors"
@@ -234,7 +226,6 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Mobile Dropdown Menu */}
         {mobileMenuOpen && (
           <div className="md:hidden absolute top-full left-0 right-0 bg-white/95 backdrop-blur-lg border-b border-[#EDF2FA] shadow-xl py-3 px-6 flex flex-col gap-2.5 text-xs font-semibold tracking-wide text-[#202A3A]/80 uppercase transition-all">
             <a href="#about" onClick={() => setMobileMenuOpen(false)} className="py-2 border-b border-[#EDF2FA]/60 hover:text-[#263B63] transition-colors">About</a>
@@ -354,9 +345,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ================= EXPERIENCE ================= */}
+      {/* ================= EXPERIENCE (TIMELINE / LIST ESTETIK BERTINGKAT) ================= */}
       <section id="experience" className="max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-20 border-t border-[#EDF2FA] scroll-mt-20">
-        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end mb-8 sm:mb-12 gap-2">
+        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end mb-10 sm:mb-14 gap-2">
           <div>
             <span className="text-xs font-mono uppercase tracking-widest text-[#263B63] font-semibold">Track Record</span>
             <h2 className="text-xl sm:text-3xl font-bold tracking-tight text-[#202A3A] mt-0.5 sm:mt-1">
@@ -366,62 +357,81 @@ export default function Home() {
           <p className="text-[11px] sm:text-xs font-mono text-[#202A3A]/60">PENGALAMAN MAGANG & SISTEM</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
+        <div className="relative border-l-2 border-[#263B63]/20 ml-3 sm:ml-6 space-y-10">
           
-          {/* Pengalaman Baru: IT Support RSAB Harapan Kita */}
-          <div className="bg-[#EDF2FA] p-6 sm:p-8 rounded-2xl sm:rounded-[2rem] border border-[#EDF2FA] hover:border-[#263B63]/40 hover:shadow-lg transition-all duration-300 flex flex-col justify-between group">
-            <div>
-              <div className="flex flex-col sm:flex-row justify-between items-start gap-2 mb-3 sm:mb-4">
+          {/* Pengalaman 1: IT Support RSAB Harapan Kita Jakarta */}
+          <div className="relative pl-6 sm:pl-8 group">
+            <div className="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-[#263B63] border-4 border-white shadow-md group-hover:scale-125 transition-transform"></div>
+            
+            <div className="bg-[#EDF2FA] p-6 sm:p-8 rounded-2xl sm:rounded-[2rem] border border-[#EDF2FA] hover:border-[#263B63]/40 hover:shadow-xl transition-all duration-300">
+              <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 mb-3">
                 <div>
-                  <span className="text-[11px] font-mono text-[#263B63] font-bold uppercase tracking-wider">IT Support (Praktik Teknis SIMRS)</span>
-                  <h3 className="text-lg sm:text-xl font-bold text-[#202A3A] mt-0.5 group-hover:text-[#263B63] transition-colors">RS Anak dan Bunda Harapan Kita</h3>
+                  <span className="text-[11px] font-mono text-[#263B63] font-bold uppercase tracking-wider">IT Support</span>
+                  <h3 className="text-lg sm:text-xl font-bold text-[#202A3A] mt-0.5">RS Anak dan Bunda Harapan Kita Jakarta</h3>
                 </div>
-                <span className="text-[11px] font-mono px-2.5 py-0.5 sm:px-3 sm:py-1 bg-white border border-[#EDF2FA] rounded-lg sm:rounded-xl text-[#263B63] font-semibold">6 Bulan</span>
+                <span className="text-[11px] font-mono px-3 py-1 bg-white border border-[#EDF2FA] rounded-xl text-[#263B63] font-semibold shadow-2xs">Nov 2026 - Saat ini</span>
               </div>
               <p className="text-xs sm:text-sm text-[#202A3A]/80 leading-relaxed mt-3 text-justify">
                 Bertugas menginstalasi, memelihara, dan memperbaiki infrastruktur perangkat keras, jaringan, serta perangkat medis berbasis IT guna memastikan seluruh operasional pelayanan kesehatan SIMRS berjalan 24/7 tanpa gangguan.
               </p>
-            </div>
-            <div className="mt-5 sm:mt-6 pt-3 sm:pt-4 border-t border-[#202A3A]/10 text-[11px] sm:text-xs font-mono text-[#202A3A]/70">
-              <span className="font-semibold text-[#202A3A]">Skills:</span> SIMRS Infrastructure, Hardware, Network Troubleshooting, Maintenance
+              <div className="mt-5 pt-3 border-t border-[#202A3A]/10 text-[11px] sm:text-xs font-mono text-[#202A3A]/70 flex flex-wrap gap-2">
+                <span className="font-semibold text-[#202A3A] self-center">Skills:</span>
+                <span className="px-2 py-0.5 bg-white rounded border border-[#EDF2FA]">SIMRS Infrastructure</span>
+                <span className="px-2 py-0.5 bg-white rounded border border-[#EDF2FA]">Hardware</span>
+                <span className="px-2 py-0.5 bg-white rounded border border-[#EDF2FA]">Network Troubleshooting</span>
+                <span className="px-2 py-0.5 bg-white rounded border border-[#EDF2FA]">Maintenance</span>
+              </div>
             </div>
           </div>
 
           {/* Pengalaman 2: PT Tampian Kencana Sejati */}
-          <div className="bg-[#EDF2FA] p-6 sm:p-8 rounded-2xl sm:rounded-[2rem] border border-[#EDF2FA] hover:border-[#263B63]/40 hover:shadow-lg transition-all duration-300 flex flex-col justify-between group">
-            <div>
-              <div className="flex flex-col sm:flex-row justify-between items-start gap-2 mb-3 sm:mb-4">
+          <div className="relative pl-6 sm:pl-8 group">
+            <div className="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-[#263B63]/60 border-4 border-white shadow-md group-hover:scale-125 transition-transform"></div>
+            
+            <div className="bg-[#EDF2FA] p-6 sm:p-8 rounded-2xl sm:rounded-[2rem] border border-[#EDF2FA] hover:border-[#263B63]/40 hover:shadow-xl transition-all duration-300">
+              <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 mb-3">
                 <div>
                   <span className="text-[11px] font-mono text-[#263B63] font-bold uppercase tracking-wider">Software Engineer Intern</span>
-                  <h3 className="text-lg sm:text-xl font-bold text-[#202A3A] mt-0.5 group-hover:text-[#263B63] transition-colors">PT Tampian Kencana Sejati</h3>
+                  <h3 className="text-lg sm:text-xl font-bold text-[#202A3A] mt-0.5">PT Tampian Kencana Sejati</h3>
                 </div>
-                <span className="text-[11px] font-mono px-2.5 py-0.5 sm:px-3 sm:py-1 bg-white border border-[#EDF2FA] rounded-lg sm:rounded-xl text-[#263B63] font-semibold">Apr - Jul 2026</span>
+                <span className="text-[11px] font-mono px-3 py-1 bg-white border border-[#EDF2FA] rounded-xl text-[#263B63] font-semibold shadow-2xs">Apr - Jul 2026</span>
               </div>
               <p className="text-xs sm:text-sm text-[#202A3A]/80 leading-relaxed mt-3 text-justify">
                 Merancang aplikasi sistem pakar berbasis mobile untuk mendigitalisasi proses diagnosis kerusakan armada kendaraan guna mempercepat pemeliharaan berkala.
               </p>
-            </div>
-            <div className="mt-5 sm:mt-6 pt-3 sm:pt-4 border-t border-[#202A3A]/10 text-[11px] sm:text-xs font-mono text-[#202A3A]/70">
-              <span className="font-semibold text-[#202A3A]">Tech:</span> Kotlin, Android Studio, MySQL, REST API, Forward Chaining
+              <div className="mt-5 pt-3 border-t border-[#202A3A]/10 text-[11px] sm:text-xs font-mono text-[#202A3A]/70 flex flex-wrap gap-2">
+                <span className="font-semibold text-[#202A3A] self-center">Tech:</span>
+                <span className="px-2 py-0.5 bg-white rounded border border-[#EDF2FA]">Kotlin</span>
+                <span className="px-2 py-0.5 bg-white rounded border border-[#EDF2FA]">Android Studio</span>
+                <span className="px-2 py-0.5 bg-white rounded border border-[#EDF2FA]">MySQL</span>
+                <span className="px-2 py-0.5 bg-white rounded border border-[#EDF2FA]">REST API</span>
+                <span className="px-2 py-0.5 bg-white rounded border border-[#EDF2FA]">Forward Chaining</span>
+              </div>
             </div>
           </div>
 
           {/* Pengalaman 3: MI Al-Hikmah Jakarta */}
-          <div className="bg-[#EDF2FA] p-6 sm:p-8 rounded-2xl sm:rounded-[2rem] border border-[#EDF2FA] hover:border-[#263B63]/40 hover:shadow-lg transition-all duration-300 flex flex-col justify-between group">
-            <div>
-              <div className="flex flex-col sm:flex-row justify-between items-start gap-2 mb-3 sm:mb-4">
+          <div className="relative pl-6 sm:pl-8 group">
+            <div className="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-[#202A3A]/40 border-4 border-white shadow-md group-hover:scale-125 transition-transform"></div>
+            
+            <div className="bg-[#EDF2FA] p-6 sm:p-8 rounded-2xl sm:rounded-[2rem] border border-[#EDF2FA] hover:border-[#263B63]/40 hover:shadow-xl transition-all duration-300">
+              <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 mb-3">
                 <div>
                   <span className="text-[11px] font-mono text-[#202A3A]/70 font-bold uppercase tracking-wider">Software Engineer Intern</span>
-                  <h3 className="text-lg sm:text-xl font-bold text-[#202A3A] mt-0.5 group-hover:text-[#263B63] transition-colors">MI Al-Hikmah Jakarta</h3>
+                  <h3 className="text-lg sm:text-xl font-bold text-[#202A3A] mt-0.5">MI Al-Hikmah Jakarta</h3>
                 </div>
-                <span className="text-[11px] font-mono px-2.5 py-0.5 sm:px-3 sm:py-1 bg-white border border-[#EDF2FA] rounded-lg sm:rounded-xl text-[#202A3A]/80 font-semibold">Okt - Des 2025</span>
+                <span className="text-[11px] font-mono px-3 py-1 bg-white border border-[#EDF2FA] rounded-lg text-[#202A3A]/80 font-semibold shadow-2xs">Okt - Des 2025</span>
               </div>
               <p className="text-xs sm:text-sm text-[#202A3A]/80 leading-relaxed mt-3 text-justify">
                 Merancang dan membangun aplikasi desktop sistem administrasi keuangan sekolah untuk mendigitalisasi pencatatan transaksi pembayaran siswa serta meminimalkan risiko kesalahan entri data.
               </p>
-            </div>
-            <div className="mt-5 sm:mt-6 pt-3 sm:pt-4 border-t border-[#202A3A]/10 text-[11px] sm:text-xs font-mono text-[#202A3A]/70">
-              <span className="font-semibold text-[#202A3A]">Tech:</span> Java, NetBeans IDE, MySQL, JasperReports
+              <div className="mt-5 pt-3 border-t border-[#202A3A]/10 text-[11px] sm:text-xs font-mono text-[#202A3A]/70 flex flex-wrap gap-2">
+                <span className="font-semibold text-[#202A3A] self-center">Tech:</span>
+                <span className="px-2 py-0.5 bg-white rounded border border-[#EDF2FA]">Java</span>
+                <span className="px-2 py-0.5 bg-white rounded border border-[#EDF2FA]">NetBeans IDE</span>
+                <span className="px-2 py-0.5 bg-white rounded border border-[#EDF2FA]">MySQL</span>
+                <span className="px-2 py-0.5 bg-white rounded border border-[#EDF2FA]">JasperReports</span>
+              </div>
             </div>
           </div>
 
