@@ -255,13 +255,8 @@ export default function Home() {
                     className="w-full h-full object-cover rounded-[1.5rem] transition-transform duration-500 group-hover:scale-105" 
                   />
                 ) : (
-                  <div className="flex flex-col items-center justify-center p-6 text-center">
-                    <div className="w-20 h-20 rounded-2xl bg-[#263B63] text-white flex items-center justify-center font-bold text-2xl mb-3 shadow-md">
-                      RKS
-                    </div>
-                    <span className="text-[11px] font-mono text-[#263B63] font-semibold mb-1 px-3 py-0.5 bg-white border border-[#EDF2FA] rounded-full">Area Foto Profil</span>
-                    <p className="text-sm font-bold text-[#202A3A] mt-2">Rangga Kurnia Sandhi, S.Kom.</p>
-                    <p className="text-xs text-[#202A3A]/70 mt-0.5">IT Support & Software Engineer</p>
+                  <div className="w-full h-full flex items-center justify-center bg-[#EDF2FA] animate-pulse">
+                    <span className="text-xs font-mono text-[#202A3A]/40">Loading...</span>
                   </div>
                 )}
               </div>
@@ -345,7 +340,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ================= EXPERIENCE ================= */}
+      {/* ================= EXPERIENCE (Urutan: 1. Jabatan & Tahun, 2. Tempat) ================= */}
       <section id="experience" className="max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-20 border-t border-[#EDF2FA] scroll-mt-20">
         <div className="mb-10 sm:mb-14">
           <span className="text-xs font-mono uppercase tracking-widest text-[#263B63] font-semibold">Track Record</span>
@@ -356,19 +351,17 @@ export default function Home() {
 
         <div className="relative border-l-2 border-[#263B63]/20 ml-3 sm:ml-6 space-y-10">
           
-          {/* Pengalaman 1: IT Support RSAB Harapan Kita Jakarta */}
+          {/* Pengalaman 1 */}
           <div className="relative pl-6 sm:pl-8 group">
             <div className="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-[#263B63] border-4 border-white shadow-md group-hover:scale-125 transition-transform"></div>
             
             <div className="bg-[#EDF2FA] p-6 sm:p-8 rounded-2xl sm:rounded-[2rem] border border-[#EDF2FA] hover:border-[#263B63]/40 hover:shadow-xl transition-all duration-300">
-              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 sm:gap-4 mb-3">
-                <div>
-                  <h3 className="text-lg sm:text-xl font-bold text-[#202A3A]">RS Anak dan Bunda Harapan Kita Jakarta</h3>
-                  <span className="text-[11px] font-mono text-[#263B63] font-bold uppercase tracking-wider block sm:inline mt-0.5 sm:mt-0">IT Support</span>
-                </div>
-                <span className="text-[11px] font-mono px-3 py-1 bg-white border border-[#EDF2FA] rounded-xl text-[#263B63] font-semibold shadow-2xs self-start sm:self-auto">Nov 2026 - Saat ini</span>
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 sm:gap-4 mb-2">
+                <span className="text-sm sm:text-base font-bold text-[#263B63] uppercase tracking-wider">IT Support</span>
+                <span className="text-[11px] font-mono px-3 py-1 bg-white border border-[#EDF2FA] rounded-xl text-[#202A3A] font-semibold shadow-2xs self-start sm:self-auto">Nov 2026 - Saat ini</span>
               </div>
-              <p className="text-xs sm:text-sm text-[#202A3A]/80 leading-relaxed mt-3 text-justify">
+              <h3 className="text-base sm:text-lg font-semibold text-[#202A3A]/90 mb-3">RS Anak dan Bunda Harapan Kita Jakarta</h3>
+              <p className="text-xs sm:text-sm text-[#202A3A]/80 leading-relaxed text-justify">
                 Bertugas menginstalasi, memelihara, dan memperbaiki infrastruktur perangkat keras, jaringan, serta perangkat medis berbasis IT guna memastikan seluruh operasional pelayanan kesehatan SIMRS berjalan 24/7 tanpa gangguan.
               </p>
               <div className="mt-5 pt-3 border-t border-[#202A3A]/10 text-[11px] sm:text-xs font-mono text-[#202A3A]/70 flex flex-wrap gap-2">
@@ -381,19 +374,17 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Pengalaman 2: PT Tampian Kencana Sejati */}
+          {/* Pengalaman 2 */}
           <div className="relative pl-6 sm:pl-8 group">
             <div className="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-[#263B63]/60 border-4 border-white shadow-md group-hover:scale-125 transition-transform"></div>
             
             <div className="bg-[#EDF2FA] p-6 sm:p-8 rounded-2xl sm:rounded-[2rem] border border-[#EDF2FA] hover:border-[#263B63]/40 hover:shadow-xl transition-all duration-300">
-              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 sm:gap-4 mb-3">
-                <div>
-                  <h3 className="text-lg sm:text-xl font-bold text-[#202A3A]">PT Tampian Kencana Sejati</h3>
-                  <span className="text-[11px] font-mono text-[#263B63] font-bold uppercase tracking-wider block sm:inline mt-0.5 sm:mt-0">Software Engineer Intern</span>
-                </div>
-                <span className="text-[11px] font-mono px-3 py-1 bg-white border border-[#EDF2FA] rounded-xl text-[#263B63] font-semibold shadow-2xs self-start sm:self-auto">Apr 2026 - Jul 2026</span>
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 sm:gap-4 mb-2">
+                <span className="text-sm sm:text-base font-bold text-[#263B63] uppercase tracking-wider">Software Engineer Intern</span>
+                <span className="text-[11px] font-mono px-3 py-1 bg-white border border-[#EDF2FA] rounded-xl text-[#202A3A] font-semibold shadow-2xs self-start sm:self-auto">Apr 2026 - Jul 2026</span>
               </div>
-              <p className="text-xs sm:text-sm text-[#202A3A]/80 leading-relaxed mt-3 text-justify">
+              <h3 className="text-base sm:text-lg font-semibold text-[#202A3A]/90 mb-3">PT Tampian Kencana Sejati</h3>
+              <p className="text-xs sm:text-sm text-[#202A3A]/80 leading-relaxed text-justify">
                 Merancang aplikasi sistem pakar berbasis mobile untuk mendigitalisasi proses diagnosis kerusakan armada kendaraan guna mempercepat pemeliharaan berkala.
               </p>
               <div className="mt-5 pt-3 border-t border-[#202A3A]/10 text-[11px] sm:text-xs font-mono text-[#202A3A]/70 flex flex-wrap gap-2">
@@ -407,19 +398,17 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Pengalaman 3: MI Al-Hikmah Jakarta */}
+          {/* Pengalaman 3 */}
           <div className="relative pl-6 sm:pl-8 group">
             <div className="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-[#202A3A]/40 border-4 border-white shadow-md group-hover:scale-125 transition-transform"></div>
             
             <div className="bg-[#EDF2FA] p-6 sm:p-8 rounded-2xl sm:rounded-[2rem] border border-[#EDF2FA] hover:border-[#263B63]/40 hover:shadow-xl transition-all duration-300">
-              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 sm:gap-4 mb-3">
-                <div>
-                  <h3 className="text-lg sm:text-xl font-bold text-[#202A3A]">MI Al-Hikmah Jakarta</h3>
-                  <span className="text-[11px] font-mono text-[#202A3A]/70 font-bold uppercase tracking-wider block sm:inline mt-0.5 sm:mt-0">Software Engineer Intern</span>
-                </div>
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 sm:gap-4 mb-2">
+                <span className="text-sm sm:text-base font-bold text-[#202A3A]/80 uppercase tracking-wider">Software Engineer Intern</span>
                 <span className="text-[11px] font-mono px-3 py-1 bg-white border border-[#EDF2FA] rounded-lg text-[#202A3A]/80 font-semibold shadow-2xs self-start sm:self-auto">Okt 2025 - Des 2025</span>
               </div>
-              <p className="text-xs sm:text-sm text-[#202A3A]/80 leading-relaxed mt-3 text-justify">
+              <h3 className="text-base sm:text-lg font-semibold text-[#202A3A]/90 mb-3">MI Al-Hikmah Jakarta</h3>
+              <p className="text-xs sm:text-sm text-[#202A3A]/80 leading-relaxed text-justify">
                 Merancang dan membangun aplikasi desktop sistem administrasi keuangan sekolah untuk mendigitalisasi pencatatan transaksi pembayaran siswa serta meminimalkan risiko kesalahan entri data.
               </p>
               <div className="mt-5 pt-3 border-t border-[#202A3A]/10 text-[11px] sm:text-xs font-mono text-[#202A3A]/70 flex flex-wrap gap-2">
@@ -666,10 +655,12 @@ export default function Home() {
             </p>
 
             <div className="mt-8 flex flex-wrap gap-4 text-xs font-mono">
-              <a href="mailto:ranggakurniasandhi@gmail.com" className="px-5 py-3 rounded-xl bg-white border border-[#202A3A]/15 text-[#202A3A] font-bold hover:bg-[#263B63] hover:text-white transition-all shadow-sm flex items-center gap-2">
-                <span>ranggakurniasandhi@gmail.com</span>
+              <a href="mailto:ranggakurnia222@gmail.com" className="px-5 py-3 rounded-xl bg-white border border-[#202A3A]/15 text-[#202A3A] font-bold hover:bg-[#263B63] hover:text-white transition-all shadow-sm flex items-center gap-3">
+                <img src="/logogmail.png" alt="Gmail" className="w-5 h-5 object-contain" />
+                <span>ranggakurnia222@gmail.com</span>
               </a>
-              <a href="https://www.linkedin.com/in/rangga-kurnia-sandhi-15550a328?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" className="px-5 py-3 rounded-xl bg-[#263B63] text-white font-bold hover:bg-[#202A3A] transition-all shadow-md flex items-center gap-2">
+              <a href="https://www.linkedin.com/in/rangga-kurnia-sandhi-15550a328?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" className="px-5 py-3 rounded-xl bg-white border border-[#202A3A]/15 text-[#202A3A] font-bold hover:bg-[#263B63] hover:text-white transition-all shadow-sm flex items-center gap-3">
+                <img src="/logolinkedin.png" alt="LinkedIn" className="w-5 h-5 object-contain" />
                 <span>Rangga Kurnnia Sandhi</span>
               </a>
             </div>
